@@ -13,7 +13,7 @@ func WriteLogFile() string {
 	// Mendapatkan direktori kerja saat ini (working directory)
 	wd, err := os.Getwd()
 	if err != nil {
-		log.Fatalf("Gagal mendapatkan working directory: %v", err)
+		log.Fatalf("Failed get working directory: %v", err)
 	}
 
 	// Target "modules" ini merupakan folder yang pasti digunakan
@@ -37,7 +37,7 @@ func WriteLogFile() string {
 	if _, err := os.Stat(logFolder); os.IsNotExist(err) {
 		err := os.Mkdir(logFolder, 0755) // 0755 permission mode
 		if err != nil {
-			log.Fatalf("Gagal membuat folder log: %v", err)
+			log.Fatalf("Failed crate a folder log: %v", err)
 		}
 	}
 

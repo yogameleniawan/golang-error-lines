@@ -13,14 +13,14 @@ func Error(message string) {
 	// get log file path
 	logFilePath := logs.WriteLogFile()
 
-	// Membuka file log untuk penulisan
+	// Open file to write log file
 	logFile, err := os.OpenFile(logFilePath, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
 	if err != nil {
-		log.Fatalf("Gagal membuka file log: %v", err)
+		log.Fatalf("Failed open file log: %v", err)
 	}
 	defer logFile.Close()
 
-	// Konfigurasi logger untuk menulis ke file
+	// Configure logging to set output to the log file
 	log.SetOutput(logFile)
 
 	logger := log.New(logFile, "Error: ", log.Ldate|log.Ltime|log.Lshortfile)
@@ -31,14 +31,14 @@ func Info(message string) {
 	// get log file path
 	logFilePath := logs.WriteLogFile()
 
-	// Membuka file log untuk penulisan
+	// Open file to write log file
 	logFile, err := os.OpenFile(logFilePath, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
 	if err != nil {
-		log.Fatalf("Gagal membuka file log: %v", err)
+		log.Fatalf("Failed open file log: %v", err)
 	}
 	defer logFile.Close()
 
-	// Konfigurasi logger untuk menulis ke file
+	// Configure logging to set output to the log file
 	log.SetOutput(logFile)
 
 	logger := log.New(logFile, "Info: ", log.Ldate|log.Ltime|log.Lshortfile)
@@ -49,14 +49,14 @@ func Warning(message string) {
 	// get log file path
 	logFilePath := logs.WriteLogFile()
 
-	// Membuka file log untuk penulisan
+	// Open file to write log file
 	logFile, err := os.OpenFile(logFilePath, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
 	if err != nil {
-		log.Fatalf("Gagal membuka file log: %v", err)
+		log.Fatalf("Failed open file log: %v", err)
 	}
 	defer logFile.Close()
 
-	// Konfigurasi logger untuk menulis ke file
+	// Configure logging to set output to the log file
 	log.SetOutput(logFile)
 
 	logger := log.New(logFile, "Warning: ", log.Ldate|log.Ltime|log.Lshortfile)
