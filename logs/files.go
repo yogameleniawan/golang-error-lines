@@ -21,6 +21,8 @@ func WriteLogFile() string {
 
 	target := os.Getenv("APP_PROJECT_ROOT")
 
+	fmt.Println("Target Directory: ", target)
+
 	index := strings.Index(wd, target)
 
 	var working_directory string
