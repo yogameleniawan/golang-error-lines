@@ -28,7 +28,7 @@ func WriteLogFile() string {
 		working_directory = wd[:index]
 	}
 
-	working_directory = working_directory + "/" + target
+	working_directory = working_directory + target
 
 	// Path relatif ke folder "logs" dari working directory saat ini
 	logFolder := filepath.Join(working_directory, "logs")
