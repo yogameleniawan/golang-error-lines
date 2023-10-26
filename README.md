@@ -31,7 +31,7 @@ errors.Info("Info Brooo!")
 errors.Warning("Warning Brooo!")
 ```
 
-#### Error Terminal
+### Error Terminal
 ![image](https://github.com/yogameleniawan/golang-error-lines/assets/64576201/5fc2205c-1355-44e6-82c7-68c88d1c1182)
 
 ##### Error Message Terminal
