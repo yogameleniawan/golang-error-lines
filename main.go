@@ -66,9 +66,15 @@ func Warning(message string) {
 func ErrorLines(err error) {
 	_, file, line, ok := runtime.Caller(1)
 
+	var message string
 	if ok {
+		message = fmt.Sprintf("Error: %s\nFile: %s\nLine: %d\n", err, file, line)
+
 		fmt.Printf("Error: %s\nFile: %s\nLine: %d\n", err, file, line)
 	} else {
+		message = fmt.Sprintf("Error: %s\n", err)
 		fmt.Printf("Error: %s\n", err)
 	}
+
+	Error(message)
 }
